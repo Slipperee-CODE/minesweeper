@@ -1,6 +1,7 @@
 import random, copy
 
 class Minesweeper():
+    # This is my minesweeper game!
     def __init__(self, board_size: int, bomb_count: int):
         self.board_size = board_size
         self.bomb_count = bomb_count
