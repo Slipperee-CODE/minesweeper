@@ -1,4 +1,4 @@
 from minesweeper import Minesweeper
 
-game = Minesweeper(10,3)
-Minesweeper.start_game()
+game = Minesweeper(5,5)
+game.start_game()
