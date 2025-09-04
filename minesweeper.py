@@ -102,7 +102,7 @@ class Minesweeper():
     def get_adjacent_non_zero_tiles(self, list_of_zero_tiles: list) -> list:
         list_of_non_zero_tiles = []
         for zero_tile_pos in list_of_zero_tiles:
-            for direction in self.SURROUNDING_COORDINATES[:5]:
+            for direction in self.SURROUNDING_COORDINATES[:]:
                 possible_x, possible_y = zero_tile_pos[0]-direction[0], zero_tile_pos[1]-direction[1]
 
                 if possible_x < 0 or possible_y < 0:
@@ -118,7 +118,7 @@ class Minesweeper():
     def get_adjacent_zero_tiles(self, orig_tile_pos: tuple, tiles_already_found=[]) -> list:
         list_of_zero_tiles = []
         #print("get_adjacent_zero_tiles ran once")
-        for direction in self.SURROUNDING_COORDINATES[:5]:
+        for direction in self.SURROUNDING_COORDINATES[:4]:
             curr_tile_pos = (orig_tile_pos[0]-direction[0],orig_tile_pos[1]-direction[1])
 
             if curr_tile_pos[0] < 0 or curr_tile_pos[1] < 0:
