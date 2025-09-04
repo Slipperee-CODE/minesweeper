@@ -136,7 +136,7 @@ class Minesweeper():
                 pass
         return list_of_zero_tiles
 
-    def update_visible_board(self, new_tiles_to_make_visible):
+    def update_visible_board(self, new_tiles_to_make_visible: list):
         for tile_pos in new_tiles_to_make_visible:
             self.visible_board[tile_pos[0]][tile_pos[1]] = self.OPEN
 
